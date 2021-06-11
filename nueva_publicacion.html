@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Nueva publicacion</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!--Javascript
+  ------------------------------------------------------>
+  <script src="js/app.js"></script>
+
+</head>
+<body>
+
+    <div class="container"><br>
+        <h3>Nueva publicacion</h3>
+        <div class="row">
+            <label for="titulo">Titulo: 
+                <input  type="text"  id="titulo">
+            </label>
+            <label for="precio">Precio: 
+                <input  type="text"  id="precio">
+            </label>
+            <label for="servicios">Servicios: 
+                <input  type="text"  id="servicios">
+            </label>
+            <label >Horario de Entrada/Salida: 
+                <input  type="text"  id="horario">
+            </label>
+            <label for="genero">Restriccion de genero:
+                <select class="u-full-width" id="genero">
+                    <option value="Option 1">Ninguno</option>
+                    <option value="Option 2">Hombres</option>
+                    <option value="Option 3">Mujeres</option>
+                </select>
+            </label>
+            <label >Seleccione si tiene algun permiso de los siguientes: </label>
+            <input type="checkbox">
+            <span class="label-body">Amueblado</span>
+            <input type="checkbox">
+            <span class="label-body">Se permiten mascotas</span>
+            <input type="checkbox">
+            <span class="label-body">Se requiere aval</span>
+            <label for="deposito">Deposito: 
+                <input  type="text"  id="deposito">
+            </label>
+            <label for="numero">Numero telefonico: 
+                <input  type="text"  id="titulo">
+            </label>
+            <label for="descripcion">Descripcion: 
+                <textarea class="u-full-width"  id="exampleMessage"></textarea>
+            </label>
+            <label >Subir fotos de tu lugar: 
+                <input  type="text"  id="foto">
+                <input  type="button" value="Examinar">
+            </label>   
+            <label >Ubicacion 
+                <input  type="text"  id="ubicacion">
+                <input  type="button" value="Ubicar en el mapa">
+            </label>         
+
+            <input  type="button" value="Cancelar">
+            <input  type="button" value="Publicar">
+        </div>
+    </div>    
+
+</body>
+</html>
