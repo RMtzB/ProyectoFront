@@ -1,0 +1,381 @@
+*, ::before, ::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   position: relative;
+   background-color: #ebebeb;
+   overflow-x: hidden;
+}
+
+.quita-scrooll {
+   overflow-y: hidden;
+}
+
+.container {
+   width: 100%;
+   max-width: 1200px;
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   margin: 0 auto;
+}
+
+.inputText, textarea, select {
+   height: 38px;
+   padding: 6px 10px;
+   background-color: #fff;
+   border: 1px solid #D1D1D1;
+   border-radius: 4px;
+   box-shadow: none;
+   margin-bottom: 20px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+.inputText:focus, textarea:focus, select:focus {
+   border: 1px solid #DC7633;
+   outline: 0;
+}
+
+.boton {
+   display: inline-block;
+   height: 38px;
+   padding: 0 30px;
+   color: #FFF;
+   background-color: #BA4A00;
+   text-align: center;
+   font-size: 11px;
+   font-weight: 600;
+   line-height: 38px;
+   letter-spacing: .1rem;
+   text-transform: uppercase;
+   text-decoration: none;
+   border-radius: 4px;
+   border: 1px solid #BA4A00;
+   cursor: pointer;
+}
+
+label {
+   margin-bottom: 5px;
+   color: #5c5c5c;
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 38px;
+   letter-spacing: .1rem;
+}
+
+/*********************** Barra principal ************************/
+header {
+   padding: 0 10px;
+   background-color: #D35400;
+   color: white;
+}
+
+h1 {
+   padding: 10px 0;
+   grid-column: 1 / 8;
+}
+
+header nav {
+   grid-column: 8 / 13;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   align-items: flex-end;
+}
+
+header nav a {
+   padding: 15px 15px;
+   display: inline-block;
+   text-decoration: none;
+   color: white;
+}
+
+.invisible {
+   display: none;
+}
+
+header nav a:hover {
+   background-color: #BA4A00;
+}
+
+.main {
+   background-color: #e2e2e2;
+}
+
+/*********************** Barra lateral ************************/
+aside {
+   grid-column: 10 / 13;
+}
+
+.form {
+   margin: 10px;
+   padding: 60px 25px;
+   border-radius: 6px;
+   display: flex;
+   flex-direction: column;
+   background-color: white;
+}
+
+/*********************** Modal rento departamento ************************/
+.modal-container {
+   width: 100vw;
+   height: 100vh;
+   position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.visible {
+   display: flex;
+}
+
+.modal {
+   width: 45%;
+   padding: 40px 30px;
+   border-radius: 6px;
+   display: inline-block;
+   background-color: white;
+   overflow-y: scroll;
+}
+
+.modalP {
+   height: 95%;
+}
+
+#modalPublicacion .modal {
+   width: 80%;
+   padding: 0;
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   overflow-y: hidden;
+}
+
+#modalPublicacion .modal .info {
+   grid-column: 1 / 9;
+   padding: 40px 30px 0 30px;
+   margin-bottom: 40px;
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   overflow-y: scroll;
+}
+
+#modalPublicacion .modal .comentarios {
+   grid-column: 9 / 13;
+   display: flex;
+   flex-direction: column;
+   padding: 40px 30px 40px 30px;
+   background-color: #c7c7c7;
+}
+
+#modalPublicacion .modal .comentarios form {
+   display: flex;
+   flex-direction: column;
+}
+
+#modalPublicacion .modal .comentarios div {
+   overflow-y: scroll;
+   height: 300px;
+   margin-top: 20px;
+}
+
+#modalPublicacion .modal .comentarios div::-webkit-scrollbar {
+   display: none;
+}
+
+#modalPublicacion .modal .comentarios div p {
+   padding: 10px;
+   margin-bottom: 20px;
+   text-align: justify;
+   border-radius: 6px;
+   background-color: white;
+}
+
+#modalPublicacion .modal .info::-webkit-scrollbar {
+   display: none;
+}
+
+#modalPublicacion .modal .info h3, #modalPublicacion .modal .info .imagen {
+   grid-column: 1 / 13;
+}
+
+#modalPublicacion .modal .info h3, #modalPublicacion .modal .info .imagen img {
+   width: 100%;
+}
+
+#modalPublicacion .modal .info label {
+   color: #34495E;
+   font-size: 1.2rem;
+}
+
+#modalPublicacion .modal .info p {
+   color: #5D6D7E;
+   font-size: 1.1rem;
+}
+
+#modalPublicacion .modal .info div {
+   display: flex;
+   flex-direction: column;
+}
+
+#modalPublicacion .modal .info > label, #modalPublicacion .modal .info > p {
+   
+   grid-column: 1 / 13;
+}
+
+#modalPublicacion .modal .info input, textarea {
+   grid-column: 1 / 13;
+}
+
+.modal h3 {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.modal form {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+}
+
+form div {
+   display: flex;
+   flex-direction: column;
+}
+
+.first-six-col {
+   grid-column: 1 / 7;
+   padding-right: 5px;
+}
+
+.second-six-col {
+   grid-column: 7 / 13;
+   padding-left: 5px;
+}
+
+.modal form > label {
+   grid-column: 1 / 13;
+}
+
+.modal form > textarea {
+   grid-column: 1 / 13;
+   height: 100px;
+   resize:none
+}
+
+.modal form > .inputText {
+   grid-column: 1 / 13;
+}
+
+.modal::-webkit-scrollbar {
+   display: none;
+}
+
+.modal button {
+   grid-column: 1 / 4;
+   background-color: #ABB2B9;
+   border-color: #ABB2B9;
+}
+
+.modal input[type="submit"] {
+   grid-column: 10 / 13;
+}
+
+.first-four-col {
+   grid-column: 1 / 5;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.second-four-col {
+   grid-column: 5 / 9;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.third-four-col {
+   grid-column: 9 / 13;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+/*********************** Tarjetas ************************/
+section {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-column: 1 / 10;
+   background-color: white;
+}
+
+.contenedorTarjetas {
+   grid-column: 1 / 13;
+}
+
+.first-three-col {
+   grid-column: 1 / 5;
+}
+
+.second-three-col {
+   grid-column: 5 / 9;
+}
+
+.third-three-col {
+   grid-column: 9 / 13;
+}
+
+.card-container {
+   padding: 10px;
+}
+
+.card {
+   border-radius: 6px;
+   box-shadow: 2px 2px 5px rgb(226, 120, 32);
+}
+
+.aviso {
+   box-shadow: 2px 2px 5px rgb(161, 12, 37);
+}
+
+.card:hover {
+   cursor: pointer;
+}
+
+.card img {
+   width: 100%;
+   border-top-left-radius: 6px;
+   border-top-right-radius: 6px;
+}
+
+.card .texto {
+   padding: 10px;
+}
+
+.card .texto h4 {
+   font-size: 1.2rem;
+}
+
+.card .texto .descripcion {
+   font-size: .9rem;
+   color: #a8a8a8;
+}
+
+.card .texto .precio {
+   font-size: .9rem;
+   color: #888888;
+   text-align: right;
+}
+
+#cerrarMP {
+   display: inline-block;
+   text-decoration: none;
+   color: red;
+   font-weight: bold;
+}
